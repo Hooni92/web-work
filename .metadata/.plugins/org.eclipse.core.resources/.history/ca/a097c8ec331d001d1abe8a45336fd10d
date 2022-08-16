@@ -1,0 +1,41 @@
+package test.todo.dao;
+
+import java.util.List;
+
+import test.todo.dto.TodoDto;
+
+public class TodoDao {
+
+	private static TodoDao dao;
+	
+	private TodoDao () {};
+	
+	public static TodoDao getInstance() {
+		if(dao==null) {
+			dao=new TodoDao();
+		}
+		return dao;
+	}
+	//추가
+	public boolean insert(TodoDto dto) {
+		return false;
+	}
+	//업데이트
+	public boolean update(TodoDto dto) {
+		return false;
+	}
+	//삭제
+	public boolean delete(int num) {
+		return false;
+	}
+	//한개불러오기
+	public TodoDto getData(int num) {
+		TodoDto dto=null;
+		return dto;
+	}
+	//전체 불러오기
+	public List<TodoDto> getList() {
+		
+		return dto;
+	}
+}

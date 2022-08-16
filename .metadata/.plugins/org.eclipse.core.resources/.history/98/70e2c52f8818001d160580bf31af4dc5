@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<h1 class="title">오늘의 운세를 확인해 보세요!</h1>
+		<div>
+			<form action="/Step01_Servlet/" method="post">
+			<label for="name"></label>
+			<input type="text" name="name" placeholder="서버에 할말 입력..." />
+			<button type="submit">전송</button>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

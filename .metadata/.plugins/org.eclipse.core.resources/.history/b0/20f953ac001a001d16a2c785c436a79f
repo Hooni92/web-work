@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹페이지 입니다.</title>
+</head>
+<body>
+<div>
+<button>
+<a href="/signup.html">회원가입</a>
+</button>
+</div>
+</body>
+</html>
