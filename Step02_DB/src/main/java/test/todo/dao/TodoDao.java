@@ -58,10 +58,13 @@ public class TodoDao {
 		Connection conn=null;
 		PreparedStatement pstmt=null;
 		int updateRowCount=0;
+		System.out.println(dto.getNum());
+		System.out.println(dto.getContent());
+		System.out.println(dto.getRegdate());
 		try {
 			conn=new DbcpBean().getConn();
-			String sql="update from todo"
-					+ " set content=? regdate=sysdate"
+			String sql="update todo"
+					+ " set content=?, regdate=sysdate"
 					+ " where num=?";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getContent());
@@ -126,9 +129,11 @@ public class TodoDao {
 			pstmt.setInt(1, num);
 			rs=pstmt.executeQuery();
 			dto=new TodoDto();
-			dto.setNum(num);
-			dto.setContent("content");
-			dto.setRegdate("regdate");
+			if(rs.next()) {
+				dto.setNum(num);
+				dto.setContent(rs.getString("content"));
+				dto.setRegdate(rs.getString("regdate"));
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {

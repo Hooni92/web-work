@@ -2,29 +2,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	//1. get 방식 파라미터로 전달되는 삭제할 회원의 번호를 읽어온다.
+	//1. GET 방식 파라미터로 ( ?num=x ) 전달되는 삭제할 할일 번호 읽어오기
 	int num=Integer.parseInt(request.getParameter("num"));
-	//2. DB에서 해당 회원의 정보를 삭제한다.
-	boolean isSuccess=TodoDao.getInstance().delete(num);
-	//3. 응답한다
-%>
+	//2. DB 에서 삭제
+	TodoDao.getInstance().delete(num);
+	//3. 응답
+%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>/todo/delete.jsp</title>
 </head>
 <body>
-	<%if(isSuccess) {%>
-		<script>
-			alert("삭제 했습니다.");
-			location.href="list.jsp";
-		</script>
-	<%}else{%>
-		<script>
-			alert("삭제 실패.");
-			location.href="list.jsp";
-		</script>
-	<%}%>
+	<script>
+		alert("삭제 했습니다.");
+		location.href="list.jsp";
+	</script>
 </body>
 </html>

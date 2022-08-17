@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
 newFileTemplateName=New JSP File (html 5)
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="jsp_all" deleted\="false" description\="qq" enabled\="true" name\="qq">\t&lt;%if(){%&gt;&\#13;\r\n\t\t&\#13;\r\n\t&lt;%}else{%&gt;&\#13;\r\n\t\t&\#13;\r\n\t&lt;%}%&gt;</template></templates>
