@@ -7,7 +7,6 @@
     pageEncoding="UTF-8"%>
 <%
 	// /test/upload.jsp 파일을 참고해서 아래의 작업을 자알~~ 해 보세요 
-	
 	//1. 폼 전송되는 파일을 webapp/upload 폴더에 저장한다.
 	String realPath=application.getRealPath("/upload");
 	//해당 경로를 access 할수 있는 파일 객체 생성
