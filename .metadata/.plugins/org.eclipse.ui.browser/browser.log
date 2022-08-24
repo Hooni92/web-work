@@ -70,3 +70,17 @@
 8월 19, 2022 10:33:20.101 [15524:13996:0819/103320.101:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
 8월 19, 2022 11:03:36.240 [15524:13996:0819/110336.239:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
 8월 19, 2022 13:03:56.977 [15524:13996:0819/130356.975:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+8월 24, 2022 09:34:32.195 NEW SESSION
+8월 24, 2022 09:34:32.195 [24208:12308:0824/093432.149:ERROR:device_event_log_impl.cc(214)] [09:34:32.149] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 24, 2022 09:35:29.160 [24208:8504:0824/093529.160:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+8월 24, 2022 09:36:35.964 [24208:12308:0824/093635.963:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 24, 2022 09:46:01.500 [24208:12308:0824/094601.500:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 24, 2022 10:15:54.171 [24208:12308:0824/101554.170:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 24, 2022 12:55:15.943 [24208:12308:0824/125515.942:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+8월 24, 2022 12:55:15.944 [24208:12308:0824/125515.944:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+8월 24, 2022 12:55:15.956 [24208:12308:0824/125515.955:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+8월 24, 2022 12:55:19.241 [24208:12308:0824/125519.241:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+8월 24, 2022 12:55:19.242 [24208:12308:0824/125519.241:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+8월 24, 2022 12:55:19.244 [24208:12308:0824/125519.243:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+8월 24, 2022 14:35:28.496 [24208:6104:0824/143528.496:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

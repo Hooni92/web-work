@@ -87,6 +87,7 @@
 			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("content").value를 이용해서 처리하면 됩니다.
 			
 			try {
+				//폼 제출하기
 				elClickedObj.form.submit();
 			} catch(e) {}
 		}
