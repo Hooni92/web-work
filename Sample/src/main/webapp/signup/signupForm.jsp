@@ -27,17 +27,23 @@
         }
         body> div> form> div> label{
             font-family: 'Pacifico', cursive;
-            color: blueviolet;
-            font-size: 20px;
+            color: Yellow;
+            font-size: 25px;
         }
         body> div> form> div> input {
             width: 300px;
+        }
+        h1{
+          	font-family: 'Pacifico', cursive;
+            color: white;
+            font-size: 6em;
         }
     </style>   
 </head>
 <body>
     <div class="container1">
     	<form action="signup.jsp" method="post" id="signupForm">
+    	<h1>The Secret</h1>
 			<div class="mb-3">
 				<label class="control-label" for="id">ID</label>
 				<input class="form-control" type="text" name="id" id="id"/>
@@ -47,16 +53,33 @@
 			<div class="mb-3">
 				<label class="control-label" for="pwd">Password</label>
 				<input class="form-control" type="password" name="pwd" id="pwd"/>
-				<div class="invalid-feedback">비밀 번호를 확인 하세요</div>
+				<div class="invalid-feedback">비밀번호는 특수문자를 포함한 6~12자리입니다.</div>
 			</div>
 			<div class="mb-3">
 				<label class="control-label" for="pwd2">Confirm Password</label>
 				<input class="form-control" type="password" name="pwd2" id="pwd2"/>
+				<div class="invalid-feedback">비밀번호를 확인해주세요.</div>
 			</div>
 			<div class="mb-3">
 				<label class="control-label" for="email">E-Mail</label>
 				<input class="form-control" type="text" name="email" id="email"/>
-				<div class="invalid-feedback">Please fill in the email format.</div>
+				<div class="invalid-feedback">이메일 주소를 확인해주세요..</div>
+			</div>
+			<div class="mb-3">
+				<label class="control-label" for="tier">Leagu-of-Legend Tier</label>
+				<select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tier">
+				  <option value="0">UnRanked</option>
+				  <option value="1">Iron</option>
+				  <option value="2">Bronze</option>
+				  <option value="3">Silver</option>
+				  <option value="4">Gold</option>
+				  <option value="5">Platinum</option>
+				  <option value="6">Diamond</option>
+				  <option value="7">Master</option>
+				  <option value="8">Grand-Master</option>
+				  <option value="9">Challenger</option>
+				</select>
+				<div class="invalid-feedback">티어를 선택해주세요.</div>
 			</div>
 			<button class="btn btn-primary" type="submit">Submit</button>
 		</form>		
@@ -80,7 +103,7 @@
 			const inputId=this.value;
 			
 			//아이디를 검증할 정규표현식 객체
-			const reg=/^[a-z].{4,9}$/;
+			const reg=/^[a-zA-Z0-9]{5,10}$/;
 			//만일 입력한 아이디가 정규표현식을 통과 하지 못한다면 빨간색으로 표시하고 함수를 여기서 바로 종료 시키기 
 			if(!reg.test(inputId)){
 				self.classList.add("is-invalid");
@@ -90,7 +113,7 @@
 			
 			//2. 서버에 보내서(페이지 전환 없이) 
 			//3. 사용 가능 여부를(이미 존재하는지 여부) 함수로 응답 받는다.
-			fetch("${pageContext.request.contextPath }/users/checkid.jsp?inputId="+inputId)
+			fetch("${pageContext.request.contextPath }/signup/checkid.jsp?inputId="+inputId)
 			.then(function(response){
 				//서버에서 응답하는 문자열의 형식이 json 형식이면 response.json();
 				//그 이외의 형식이면 response.text(); 를 호출해서 리턴해 준다. 
@@ -118,19 +141,21 @@
 			const pwd=document.querySelector("#pwd").value;
 			const pwd2=document.querySelector("#pwd2").value;
 			//비밀번호를 검증할 정규 표현식
-			let reg=/[\W]/;
+			let reg1=/^[\S]{6,12}/;
+			let reg2=/[\W]/;
 			//만일 비밀번호가 정규 표현식을 통과 하지 못한다면 
-			if(!reg.test(pwd)){		
+			if(!reg1.test(pwd) || !reg2.test(pwd) ){		
 				document.querySelector("#pwd").classList.add("is-invalid");
 				isPwdValid=false;
 				return; //함수를 여기서 끝내라 
 			}
 			
 			if(pwd != pwd2){//만일 비밀번호 입력란과 확인란이 다르다면
-				document.querySelector("#pwd").classList.add("is-invalid");
+				document.querySelector("#pwd2").classList.add("is-invalid");
 				isPwdValid=false;
 			}else{
-				document.querySelector("#pwd").classList.add("is-valid");
+				document.querySelector("#pwd2").classList.remove("is-invalid");
+				document.querySelector("#pwd2").classList.add("is-valid");
 				isPwdValid=true;
 			}
 		}
@@ -150,7 +175,7 @@
 			//입력한 이메일
 			const inputEmail=this.value;
 			//이메일을 검증할 정규 표현식
-			const reg=/@/;
+			const reg=/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 			if(!reg.test(inputEmail)){
 				this.classList.add("is-invalid");
 				isEmailValid=false;

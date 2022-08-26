@@ -9,7 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-//Step04_Final/하위의 모든 요청
+//Sample/하위의 모든 요청
 @WebFilter("/*")
 public class EncodingFilter implements Filter{
 

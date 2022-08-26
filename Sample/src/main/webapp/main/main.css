@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+#container{
+    background-image: url("https://post-phinf.pstatic.net/MjAxNjEyMTFfMTQ2/MDAxNDgxNDM5NTE4MzE1.TlQRfGduXTSoPr0yHcW4ArdAhPgYfCrI7nFi7IraVoQg.KDQlAEv5r31S0lDXYSsnKJXx6Il0gR1L8xOc_oCKKokg.JPEG/image_6963812281481439508693.jpg?type=w1200");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}    
+#nav ul li{
+    float: left;
+    margin-left:20px;
+    font-size: 20px;
+}
+
+#profile{
+	padding-top: 100px;
+	width: 300px;
+	height: 420px;
+	border: 3px solid blue;
+	color: white;
+	background-color: navy;
+
+}
+
+@media screen and (max-width: 1850px) {
+    .ad {
+    display: none;
+    }
+    } 

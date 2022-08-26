@@ -84,3 +84,7 @@
 8월 24, 2022 12:55:19.242 [24208:12308:0824/125519.241:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
 8월 24, 2022 12:55:19.244 [24208:12308:0824/125519.243:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
 8월 24, 2022 14:35:28.496 [24208:6104:0824/143528.496:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+8월 25, 2022 17:31:35.117 NEW SESSION
+8월 25, 2022 17:31:35.117 [23660:24300:0825/173135.109:ERROR:device_event_log_impl.cc(214)] [17:31:35.108] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 25, 2022 17:32:31.702 [23660:25708:0825/173231.701:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

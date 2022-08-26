@@ -29,6 +29,11 @@
             color: blueviolet;
             font-size: 20px;
         }
+        h1{
+          	font-family: 'Pacifico', cursive;
+            color: white;
+            font-size: 6em;
+        }
     </style>   
     <title>login</title>
 </head>
@@ -36,6 +41,7 @@
     <div class="container1">
         <div>
             <form action="login.jsp" method="post">
+            <h1>The Secret</h1>
                 <input type="hidden" name="url" value=""/>
                 <div>
                     <label class="form-label" for="id">ID</label>
